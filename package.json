@@ -1,0 +1,12 @@
+{
+  "name": "ethjstxtest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dan Miller <danjm.com@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@ethereumjs/common": "^2.4.0",
+    "@ethereumjs/tx": "^3.3.0",
+    "ethers": "^5.4.5"
+  }
+}
