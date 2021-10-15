@@ -44,3 +44,15 @@ const signedFromDec = txFromDec.sign(pkb)
 console.log('signedFromHex', signedFromHex.serialize().toString('hex'))
 console.log('signedFromDec', signedFromDec.serialize().toString('hex'))
 console.log(signedFromDec.serialize().toString('hex') === signedFromHex.serialize().toString('hex'))
+
+const maxFeePerGasFromHexTx = signedFromHex.raw()[2].toString('hex')
+const maxFeePerGasFromDecTx = signedFromDec.raw()[2].toString('hex')
+
+const maxFeePerGasFromHexTxAsDecimal = Number('0x' + maxFeePerGasFromHexTx)
+const maxFeePerGasFromDecTxAsDecimal = Number('0x' + maxFeePerGasFromDecTx)
+
+console.log('maxFeePerGasFromHexTx', maxFeePerGasFromHexTx)
+console.log('maxFeePerGasFromDecTx', maxFeePerGasFromDecTx)
+
+console.log('maxFeePerGasFromHexTxAsDecimal', maxFeePerGasFromHexTxAsDecimal)
+console.log('maxFeePerGasFromDecTxAsDecimal', maxFeePerGasFromDecTxAsDecimal)
